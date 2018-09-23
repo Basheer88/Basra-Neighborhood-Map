@@ -10,6 +10,16 @@ download or Clone the GitHub repository
 
 https://github.com/Basheer88/Basra-Neighborhood-Map.git
 
+# How to Run It
+Just open `index.html` and you are good to go.
+
+### Description of Main File and folers in this Project
+
+- `index.html` - Main file to open.
+- `css` - Contains stylesheet.
+- `img` - Contains the used Image and icons.
+- `js` - Contains app JS file and other required js.
+
 # How to change The center of the map
 edit app.js located inside js folder. inside initMap() function change lat & lng to your place.
 
