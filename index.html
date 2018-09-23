@@ -1,0 +1,40 @@
+<html lang="en">
+	<head>
+		<title>Basra Neighborhood Map</title>
+		<link rel="icon" href="img/icon.png">
+		<!-- Required meta tags -->	
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Required CSS stylesheet -->
+		<link rel="stylesheet" href="css/small.css">
+		<link rel="stylesheet" media="screen and (min-width:401px)" href="css/medium.css">
+		<link rel="stylesheet" media="screen and (min-width:791px)" href="css/large.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="map" data-bind="click: toggleUnActive"></div>
+			<div id="over_map">
+				<div class="container">
+					<i class="material-icons" data-bind="click: toggleActive">search</i>
+					<div class="tran" data-bind="css : {'tran' : isActive}">
+						<input type="text" class="txtInput" data-bind="textInput: inputLocation">
+						<ul data-bind="foreach: locationItem">
+							<li data-bind="text: title, click: $parent.show"></li>
+						</ul>
+    				</div>
+  				</div>
+   			</div>
+		</div>
+
+  	<!-- Load the JS Files-->
+  	<script src="js/knockout-3.4.2.js"></script>
+  	<script src="js/jquery.min.js"></script>
+  	<script src="js/app.js"></script>
+  	<!-- Load the JS API ASYNCHRONOUSLY.-->
+  	<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR-Jph6ML0dKhemOd3A_am8prFl-UN5cw&v=3&callback=initMap"  onerror="mapError()">>
+  	</script>
+	</body>
+</html>

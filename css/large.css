@@ -1,0 +1,33 @@
+i.material-icons {
+		height: 50px;
+}
+
+.container {
+	width: 300px;
+}
+
+.txtInput {
+	height: 50px;
+	margin: 12px;
+}
+
+ul li {
+	font-size: 17px;
+}
+
+.infoContainer {
+	width: 250px;
+}
+
+.infoTitle {
+	font-size: 15px;
+}
+
+.infoImage {
+	width: 220px;
+	height: 180px;
+}
+
+.info {
+	font-size: 12px;
+}
