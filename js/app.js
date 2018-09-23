@@ -1,3 +1,4 @@
+/* define Global variable */
 var map;
 var marker = [];
 
@@ -185,10 +186,10 @@ function initMap() {
 var ViewModel = function() {
     self.isActive = ko.observable(true);
     self.toggleActive = function(){
-       self.isActive(!self.isActive()); //toggle the isActive value between true/false
+       self.isActive(!self.isActive());    //toggle the isActive value between true/false
 	 }    
     self.toggleUnActive = function(){
-       self.isActive(true); //toggle the isActive value between true/false
+       self.isActive(true);                //toggle the isActive value between true/false
 	 }
 
   var bounds = new google.maps.LatLngBounds();
@@ -254,7 +255,7 @@ var ViewModel = function() {
 
 // function to return wikipedia article
 function wikiArticle(cityStr) {
-	var wikiUrl = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + cityStr + '&format=json&prop=extracts&exintro&explaintext&callback=wikiCallback';
+  var wikiUrl = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + cityStr + '&format=json&prop=extracts&exintro&explaintext&callback=wikiCallback';
   // set timeout to prevent waiting forever
   var wikiRequestTimeout = setTimeout(function(){
      $("#here").text('Error Retrieving Wiki Data');
